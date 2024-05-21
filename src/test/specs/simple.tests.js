@@ -1,8 +1,14 @@
+import Pastebin from ('../../po/pages/pastebin.page.js');
+
+
 describe('pastebin', () => {
 
     beforeEach(async () => {
-        await browser.url('https://pastebin.com/')
-    })
+
+        const pastebinPage = new Pastebin();
+        await pastebinPage.open();
+       // await browser.url('https://pastebin.com/');
+    });
 
     it('new paste checking attributes', async () => {    
 
